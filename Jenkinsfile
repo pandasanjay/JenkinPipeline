@@ -1,5 +1,8 @@
 pipeline {
     agent any 
+    triggers {
+        issueCommentTrigger('.*Build.*')
+    }
     stages {
         stage('Build') { 
             steps {
