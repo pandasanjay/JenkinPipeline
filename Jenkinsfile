@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Test') { 
             steps {
-                 sh 'echo "Test 4"'
+                 sh 'echo "Test 5"'
             }
         }
         stage('Deploy') { 
