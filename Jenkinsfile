@@ -20,6 +20,7 @@ pipeline {
             }
         }
         stage('Deploy') { 
+            when { not {environment name: 'GITHUB_COMMENT', value: 'Build'} }
             steps {
                  sh 'echo "Deploy"'
             }
