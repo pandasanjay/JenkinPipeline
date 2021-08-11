@@ -4,6 +4,11 @@ pipeline {
         issueCommentTrigger('.*Build.*')
     }
     stages {
+        stage('print env vars') {
+            steps {
+                sh 'printenv'
+            }
+        }
         stage('Build') { 
             steps {
                 sh 'echo "Build"' 
